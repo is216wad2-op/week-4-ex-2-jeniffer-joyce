@@ -9,9 +9,16 @@
             background-color: goldenrod;
         }
 
-        .circle {
+        #div2 {
+            width: 200px;
+            height: 200px;
+            background-color: goldenrod;
             border-radius: 50%;
         }
+
+        /* .circle {
+            border-radius: 50%;
+        } */
 
         /* add CSS code here */
     </style>
@@ -30,9 +37,20 @@
     <script>
 
         // add code here
+        var square = true;
         function changeShape() {
             var shape = document.getElementById("div1");
-            shape.classList.toggle('circle')
+            // shape.classList.toggle('circle')
+
+            if (square) {
+                var div = document.getElementById("div1");
+                div.id = "div2";
+                square = false;
+            } else {
+                var div = document.getElementById("div2");
+                div.id = "div1";
+                square = true;
+            }
         }
 
 
